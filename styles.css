@@ -1,0 +1,180 @@
+/* root colors and mga ganun */
+:root {
+    --primary-color: #3b82f6; /* main blue siya lol */
+    --secondary-color: #2563eb; /* darker blue para sa hover */
+    --text-color-light: #f9f9f9; /* text na light color */
+    --text-color-dark: #1f2937; /* dark text */
+    --gray-light: #4b5563; /* grayish text */
+    --background-color: #fafafa; /* bg ng page */
+
+    /* icon colors tsaka stuff */
+    --healthcare-color: #ef4444; /* red for health */
+    --finance-color: #10b981; /* green parang money */
+    --transport-color: #f59e0b; /* yellowish */
+    --developer-color: #3b82f6; /* blue ulit lol */
+    --scientist-color: #8b5cf6; /* purpley color */
+    --security-color: #f43f5e; /* pink red */
+}
+
+/* global na styles ng page */
+body {
+    font-family: 'Inter', sans-serif; /* nice font for body */
+    font-size: 16px; /* normal size lang */
+    line-height: 1.7; /* spacing sa lines */
+    margin: 0;
+    padding: 0;
+    color: #333; /* darkish text */
+    background-color: var(--background-color); /* page bg */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif; /* headings font */
+    font-weight: 700;
+    color: #1a1a1a; /* blackish text */
+    letter-spacing: 0.5px; /* konti space sa letters */
+}
+
+a { 
+    text-decoration: none; /* no underline sa links */
+    transition: color 0.3s ease; /* smooth hover */
+}
+
+.container {
+    max-width: 1200px; /* max width lang */
+    margin: 0 auto; /* para center siya */
+    padding: 0 20px; /* konti padding */
+}
+
+/* navbar stuff */
+.navbar {
+    position: fixed; /* laging nasa top , wow*/
+    width: 100%; /* buong screen */
+    background-color: #fff; /* white lang */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* konti shadow */
+    z-index: 10; /* para di matabunan */
+    padding: 20px 0; /* taas baba space */
+}
+
+.navbar-content { 
+    display: flex; 
+    justify-content: space-between; /* left and right */
+    align-items: center;
+}
+
+.navbar-logo { display: flex; align-items: center; } /* logo dito */
+.logo-icon { color: var(--primary-color); font-size: 1.5rem; margin-right: 10px; }
+.site-title { font-size: 1.5rem; font-weight: 600; color: var(--text-color-dark); }
+
+.navbar-links { display: flex; gap: 20px; } /* links spaced out */
+.nav-link { font-weight: 500; color: var(--gray-light); }
+.nav-link:hover { color: var(--primary-color); } /* hover color */
+
+/* hero section, dun sa top ng page.. lord wag mo pa ako kunin */
+.hero-section {
+    background: linear-gradient(135deg, rgba(56,182,255,0.1) 0%, rgba(0,212,255,0.05) 100%); /* gradient bg */
+    padding: 100px 0; 
+    text-align: center;
+}
+
+.hero-title { font-size: 2.5rem; font-weight: 700; line-height: 1.3; }
+.hero-description { font-size: 1.1rem; font-weight: 400; line-height: 1.8; color: #444; margin-bottom: 30px; }
+.highlight { color: var(--primary-color); } /* para may color yung words */
+
+/* buttons dito */
+.hero-buttons { display: flex; justify-content: center; gap: 20px; }
+.btn-primary, .btn-secondary {
+    padding: 12px 30px; /* inner padding ng button */
+    border-radius: 8px; /* bilugan konti */
+    font-weight: 600; 
+    text-decoration: none; 
+    transition: transform 0.3s ease, background-color 0.3s ease; /* smooth transition */
+}
+.btn-primary { background-color: var(--primary-color); color: white; }
+.btn-primary:hover { background-color: var(--secondary-color); transform: translateY(-3px); } /* yung hover effect */
+.btn-secondary { border: 2px solid var(--primary-color); color: var(--primary-color); }
+.btn-secondary:hover { background-color: #eff6ff; } /* light bg sa hover */
+
+/* mga sections ng page */
+.section { padding: 80px 20px; text-align: center; }
+.section-title { font-size: 2rem; font-weight: 700; color: var(--text-color-dark); margin-bottom: 1rem; }
+.section-description { font-size: 1.05rem; font-weight: 400; color: #555; max-width: 720px; margin: 0 auto 2rem; line-height: 1.8; }
+
+/* section backgrounds */
+.history-section { background: #f9f9f9; } /* light grey bg */
+.topics-section { background: #eaf7ff; } /* light blue bg */
+.applications-section { background: #fff6e5; } /* light yellow bg */
+.careers-section { background: #f4f9f4; } /* light green bg */
+
+/* timeline thing */
+.timeline { position: relative; margin: 50px auto; padding-left: 30px; border-left: 4px solid var(--primary-color); max-width: 800px; }
+.timeline-item { display: flex; align-items: flex-start; margin-bottom: 40px; position: relative; }
+.timeline-icon {
+    background-color: var(--primary-color); /* yung circle ng icon */
+    color: white; /*mata ko namumuti na*/
+    font-size: 1.2rem;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex; align-items: center; justify-content: center;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* konti shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* hover smooth */
+}
+.timeline-icon:hover { transform: scale(1.15); background-color: var(--secondary-color); }
+
+.timeline-content {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 12px; /* bilugan, parang yung mukha ko */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08); /* soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.timeline-content:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
+.timeline-title { font-size: 1.15rem; font-weight: 500; color: #333; margin-bottom: 10px; }
+.timeline-item.today .timeline-title { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
+.timeline-content p, .timeline-item:not(.today) p { color: #555; font-size: 0.95rem; }
+
+/* cards stuff */
+.topic-cards, .application-cards, .career-cards {
+    display: grid;
+    grid-template-columns: 1fr; /* default 1 column */
+    gap: 20px; /* space sa cards */
+}
+
+.topic-card, .application-card, .career-card {
+    background: white;
+    padding: 20px; /* inner spacing */
+    border-radius: 12px; /* bilugan */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*daming alam transition pa*/
+}
+.topic-card:hover, .application-card:hover, .career-card:hover {
+    transform: translateY(-5px); /* konti taas sa hover */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+.topic-icon, .application-icon, .career-icon {
+    font-size: 2rem; padding: 15px; margin-bottom: 15px; border-radius: 50%; color: white; display: inline-flex; justify-content: center; align-items: center; /* icon circle */
+}
+
+/* icon colors */
+.healthcare { background-color: var(--healthcare-color); } /* red */
+.finance { background-color: var(--finance-color); } /* green */
+.transport { background-color: var(--transport-color); } /* yellow */
+.developer { background-color: var(--developer-color); } /* blue */
+.scientist { background-color: var(--scientist-color); } /* purple */
+.security { background-color: var(--security-color); } /* pink */
+.topic-icon { background-color: var(--primary-color); } /* default color wala na maisip */
+
+.topic-description, .application-description, .career-description { font-size: 0.9rem; line-height: 1.4; color: #444; } /* text sa cards */
+
+/* responsive grids */
+@media (min-width: 768px) { .topic-cards, .application-cards, .career-cards { grid-template-columns: repeat(2,1fr); } }
+@media (min-width: 1024px) { .topic-cards, .application-cards, .career-cards { grid-template-columns: repeat(3,1fr); } }
+
+/* call to action , call 911 na din */
+.cta-section { background-color: var(--primary-color); color: white; padding: 80px 0; text-align: center; } /* CTA section */
+.cta-title { font-size: 2.5rem; font-weight: bold; margin-bottom: 20px; }
+.cta-description { font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.7; }
+
+/* full screen history, pwede history n lng ng pinas? */
+.history-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; } /* full screen height na section */
